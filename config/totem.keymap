@@ -24,6 +24,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        coso {
+            bindings = <&to 3>;
+            key-positions = <36 31>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
