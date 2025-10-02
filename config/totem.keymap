@@ -17,6 +17,15 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    behaviors {
+        gaming: gaming {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GAMING";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&to 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -42,7 +51,7 @@
             bindings = <
      &kp TAB           &kp F7  &kp F8  &kp F9  &kp F12    &none     &none           &kp UP_ARROW    &none            &kp BACKSPACE
      &kp LEFT_SHIFT    &kp F4  &kp F5  &kp F6  &kp F11    &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp DELETE
-&ss  &kp LEFT_CONTROL  &kp F1  &kp F2  &kp F3  &kp F10    &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP     &kp END          &none          &to 3
+&ss  &kp LEFT_CONTROL  &kp F1  &kp F2  &kp F3  &kp F10    &kp HOME  &kp PAGE_DOWN   &kp PAGE_UP     &kp END          &none          &gaming
                                &trans  &trans  &trans     &trans    &trans          &trans
             >;
         };
@@ -51,7 +60,7 @@
             bindings = <
             &kp TAB           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &trans  &trans  &trans  &trans  &trans
             &kp LEFT_SHIFT    &kp Q         &kp W         &kp E         &kp R           &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp LEFT_CONTROL  &kp A         &kp S         &kp D         &kp F           &trans  &trans  &trans  &trans  &bl BL_ON  &to 0
+&kp ESCAPE  &kp LEFT_CONTROL  &kp A         &kp S         &kp D         &kp F           &trans  &trans  &trans  &trans  &bl BL_ON  &gaming
                                             &kp Y         &kp B         &kp SPACE       &trans  &trans  &trans
             >;
         };
