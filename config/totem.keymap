@@ -15,23 +15,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        ss: ss {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp LEFT_SHIFT &kp S>;
-            label = "SS";
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        coso {
-            bindings = <&to 3>;
-            key-positions = <36 31>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -73,12 +57,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        device {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
