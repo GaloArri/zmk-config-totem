@@ -45,6 +45,15 @@
                                   &trans  &trans  &trans     &trans    &trans          &trans
             >;
         };
+
+        layer_3 {
+            bindings = <
+         &kp TAB    &kp N1  &kp N2  &kp N3  &kp N4       &trans  &trans  &trans  &trans  &trans
+         &kp LSHFT  &kp Q   &kp W   &kp E   &kp R        &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp LALT   &kp A   &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+                            &kp Y   &kp B   &kp SPACE    &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
